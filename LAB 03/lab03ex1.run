@@ -1,0 +1,4 @@
+option solver gurobi;
+model lab03ex1.mod;
+data lab03ex1.dat;
+solve;

@@ -1,0 +1,15 @@
+param n>0 default 20;
+set V := 1 .. n;
+set Complete := {(i,j) in V cross V: i<j};
+set E within Complete default Complete;
+var h{V}>=0 <= 1, binary;
+var xd{E}>=0,<=1;
+var xu{E}>=0,<=1;
+var x{E}>=0,<=1;
+param c{E} default 1;
+maximize cost:sum{(i,j) in E}c[i,j]*x[i,j];
+subject to xd1{(i,j) in E}:xd[i,j] <= h[i];
+subject to xd2{(i,j) in E}:xd[i,j] <= 1-h[j];
+subject to xu1{(i,j) in E}:xu[i,j] <= h[j];
+subject to xu2{(i,j) in E}:xu[i,j] <= 1-h[i];
+subject to xsum{(i,j) in E}:x[i,j]=xd[i,j]+xu[i,j];

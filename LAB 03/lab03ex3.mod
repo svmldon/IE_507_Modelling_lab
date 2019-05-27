@@ -1,0 +1,11 @@
+set CANDS;
+set DAYS;
+param MAXHOURS;
+param MINHOURS{CANDS};
+param AVAIL_HOURS{CANDS,DAYS};
+param WAGE{CANDS};
+var hours{CANDS,DAYS}>=0;
+minimize TOTAL_COST:sum{i in CANDS,j in DAYS} WAGE[i]*hours[i,j];
+c1{i in CANDS,j in DAYS}:hours[i,j]<=AVAIL_HOURS[i,j];
+c2{i in CANDS}:sum{j in DAYS} hours[i,j]>=MINHOURS[i];
+c3{j in DAYS}:sum{i in CANDS} hours[i,j]=MAXHOURS;

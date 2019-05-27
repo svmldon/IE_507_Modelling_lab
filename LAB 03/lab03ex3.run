@@ -1,0 +1,9 @@
+reset;
+option solver gurobi;
+model lab03ex3.mod;
+data lab03ex3.dat;
+solve;
+display hours;
+display _nvars;
+display _ncons;
+display _snzcons;

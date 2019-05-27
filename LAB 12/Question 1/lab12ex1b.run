@@ -1,0 +1,8 @@
+reset;
+model lab12ex1b.mod;
+data lab12ex1b.dat;
+option solver snopt;
+solve;
+display a,b,c;
+display cost;
+display quantity;

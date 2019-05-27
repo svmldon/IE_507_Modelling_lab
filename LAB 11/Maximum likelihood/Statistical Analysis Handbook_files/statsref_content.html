@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://www.statsref.com/HTML/statsref_content.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Statistical Analysis Handbook</title>
+   
+
+   <!-- This line includes the general project style sheet (not required) -->
+   <link type="text/css" href="./default.css" rel="stylesheet">
+
+   <!-- This block defines the styles of the TOC headings, change them as needed -->
+   <style type="text/css">
+       body { }
+       .heading1 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading2 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading3 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading4 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading5 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading6 { font-size: 10pt; color: #000000; text-decoration: none; }
+
+       .hilight1 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight2 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight3 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight4 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight5 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight6 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+
+       /* TOC LIST CSS */
+       #toc    { padding:0; margin:0 }
+       #toc li { margin-top:2px; margin-left:0; padding:1px }
+       #toc ul { padding-left:0; margin-left:0px }       
+       /* TOC LIST CSS */
+   </style>
+   <script type="text/javascript" src="./jquery.js.download"></script>
+   <script type="text/javascript" src="./helpman_settings.js.download"></script>
+   <script type="text/javascript">
+     var parentScope = (parent.hmNavigationFrame);
+     if (!parentScope) {
+		      var s = document.createElement("script");
+		      s.setAttribute("type","text/javascript");
+		      s.setAttribute("src", "helpman_navigation.js");
+		      document.getElementsByTagName("head")[0].appendChild(s);
+	    }
+     else {
+       if (initialtocstate != "expandall") parent.hmAddCss(document, "#toc li ul { display: none }");
+     }
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { if (parentScope) parent.loadstate(document.getElementById("toc")); else loadstate(document.getElementById("toc")); }
+     function savetoc() { if (parentScope) parent.savestate(document.getElementById("toc")); else savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); if (parentScope) parent.hmNodeClicked(node, event); else hmNodeClicked(node, event); }
+     function dblclicked(node) { if (parentScope) parent.hmNodeDblclicked(node); else hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script><style type="text/css">#toc li ul { display: none }</style>
+</head>
+<body>
+<ul id="toc" style="list-style-type:none;display:block;padding-left:0">
+<li class="heading1" id="i1" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading1" id="a1" href="http://www.statsref.com/HTML/introduction.html" target="hmcontent"><span class="heading1" id="s1" ondblclick="return dblclicked(this)">1 Introduction</span></a>
+<ul id="ul1" style="list-style-type: none; display: none;">
+<li class="heading2" id="i1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a1.1" href="http://www.statsref.com/HTML/navigation.html" target="hmcontent"><span class="heading2" id="s1.1">1.1 How to use this Handbook</span></a>
+</li>
+<li class="heading2" id="i1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a1.2" href="http://www.statsref.com/HTML/intended_audience_and_scope.html" target="hmcontent"><span class="heading2" id="s1.2">1.2 Intended audience and scope</span></a>
+</li>
+<li class="heading2" id="i1.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a1.3" href="http://www.statsref.com/HTML/suggested_reading.html" target="hmcontent"><span class="heading2" id="s1.3">1.3 Suggested reading</span></a>
+</li>
+<li class="heading2" id="i1.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a1.4" href="http://www.statsref.com/HTML/notation.html" target="hmcontent"><span class="heading2" id="s1.4">1.4 Notation and symbology</span></a>
+</li>
+<li class="heading2" id="i1.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a1.5" href="http://www.statsref.com/HTML/historical_context.html" target="hmcontent"><span class="heading2" id="s1.5">1.5 Historical context</span></a>
+</li>
+<li class="heading2" id="i1.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a1.6" href="http://www.statsref.com/HTML/early_applications.html" target="hmcontent"><span class="heading2" id="s1.6">1.6 An applications-led discipline</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i2" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading1" id="a2" href="http://www.statsref.com/HTML/statistical_data.html" target="hmcontent"><span class="heading1" id="s2" ondblclick="return dblclicked(this)">2 Statistical data</span></a>
+<ul id="ul2" style="list-style-type: none; display: none;">
+<li class="heading2" id="i2.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.1" href="http://www.statsref.com/HTML/statistics__statistical_analys.html" target="hmcontent"><span class="heading2" id="s2.1">2.1 The Statistical Method</span></a>
+</li>
+<li class="heading2" id="i2.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.2" href="http://www.statsref.com/HTML/misuse_and_abuse_of_statistics.html" target="hmcontent"><span class="heading2" id="s2.2">2.2 Misuse, Misinterpretation and Bias</span></a>
+</li>
+<li class="heading2" id="i2.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.3" href="http://www.statsref.com/HTML/sampling.html" target="hmcontent"><span class="heading2" id="s2.3">2.3 Sampling and sample size</span></a>
+</li>
+<li class="heading2" id="i2.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.4" href="http://www.statsref.com/HTML/data_preparation.html" target="hmcontent"><span class="heading2" id="s2.4">2.4 Data preparation and cleaning</span></a>
+</li>
+<li class="heading2" id="i2.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.5" href="http://www.statsref.com/HTML/missing_data.html" target="hmcontent"><span class="heading2" id="s2.5">2.5 Missing data and data errors</span></a>
+</li>
+<li class="heading2" id="i2.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.6" href="http://www.statsref.com/HTML/statistical_error.html" target="hmcontent"><span class="heading2" id="s2.6">2.6 Statistical error</span></a>
+</li>
+<li class="heading2" id="i2.7" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading2" id="a2.7" href="http://www.statsref.com/HTML/statistics_in_medical_research.html" target="hmcontent"><span class="heading2" id="s2.7" ondblclick="return dblclicked(this)">2.7 Statistics in Medical Research</span></a>
+<ul id="ul2.7" style="list-style-type: none; display: none;">
+<li class="heading3" id="i2.7.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.7.1" href="http://www.statsref.com/HTML/causation.html" target="hmcontent"><span class="heading3" id="s2.7.1">2.7.1 Causation</span></a>
+</li>
+<li class="heading3" id="i2.7.2" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading3" id="a2.7.2" href="http://www.statsref.com/HTML/conduct_and_reporting_of_medic.html" target="hmcontent"><span class="heading3" id="s2.7.2" ondblclick="return dblclicked(this)">2.7.2 Conduct and reporting of medical research</span></a>
+<ul id="ul2.7.2" style="list-style-type: none; display: none;">
+<li class="heading4" id="i2.7.2.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a2.7.2.1" href="http://www.statsref.com/HTML/randomized_controlled_trials.html" target="hmcontent"><span class="heading4" id="s2.7.2.1">2.7.2.1 Randomized controlled trials</span></a>
+</li>
+<li class="heading4" id="i2.7.2.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a2.7.2.2" href="http://www.statsref.com/HTML/case-control_studies2.html" target="hmcontent"><span class="heading4" id="s2.7.2.2">2.7.2.2 Case-control studies</span></a>
+</li>
+<li class="heading4" id="i2.7.2.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a2.7.2.3" href="http://www.statsref.com/HTML/cohort_studies2.html" target="hmcontent"><span class="heading4" id="s2.7.2.3">2.7.2.3 Cohort studies</span></a>
+</li>
+<li class="heading4" id="i2.7.2.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a2.7.2.4" href="http://www.statsref.com/HTML/meta_analysis.html" target="hmcontent"><span class="heading4" id="s2.7.2.4">2.7.2.4 Meta analysis</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i3" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading1" id="a3" href="http://www.statsref.com/HTML/statistical_inference.html" target="hmcontent"><span class="heading1" id="s3" ondblclick="return dblclicked(this)">3 Statistical concepts</span></a>
+<ul id="ul3" style="list-style-type: none; display: none;">
+<li class="heading2" id="i3.1" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading2" id="a3.1" href="http://www.statsref.com/HTML/probability_theory.html" target="hmcontent"><span class="heading2" id="s3.1" ondblclick="return dblclicked(this)">3.1 Probability theory</span></a>
+<ul id="ul3.1" style="list-style-type: none; display: none;">
+<li class="heading3" id="i3.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.1.1" href="http://www.statsref.com/HTML/odds.html" target="hmcontent"><span class="heading3" id="s3.1.1">3.1.1 Odds</span></a>
+</li>
+<li class="heading3" id="i3.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.1.2" href="http://www.statsref.com/HTML/risks.html" target="hmcontent"><span class="heading3" id="s3.1.2">3.1.2 Risks</span></a>
+</li>
+<li class="heading3" id="i3.1.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.1.3" href="http://www.statsref.com/HTML/frequentist_probability_theory.html" target="hmcontent"><span class="heading3" id="s3.1.3">3.1.3 Frequentist probability theory</span></a>
+</li>
+<li class="heading3" id="i3.1.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.1.4" href="http://www.statsref.com/HTML/bayesian_probability_theory.html" target="hmcontent"><span class="heading3" id="s3.1.4">3.1.4 Bayesian probability theory</span></a>
+</li>
+<li class="heading3" id="i3.1.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.1.5" href="http://www.statsref.com/HTML/probability_distributions2.html" target="hmcontent"><span class="heading3" id="s3.1.5">3.1.5 Probability distributions</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i3.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.2" href="http://www.statsref.com/HTML/statistical_modeling.html" target="hmcontent"><span class="heading2" id="s3.2">3.2 Statistical modeling</span></a>
+</li>
+<li class="heading2" id="i3.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.3" href="http://www.statsref.com/HTML/computational_statistics.html" target="hmcontent"><span class="heading2" id="s3.3">3.3 Computational statistics</span></a>
+</li>
+<li class="heading2" id="i3.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.4" href="http://www.statsref.com/HTML/inference.html" target="hmcontent"><span class="heading2" id="s3.4">3.4 Inference</span></a>
+</li>
+<li class="heading2" id="i3.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.5" href="http://www.statsref.com/HTML/bias.html" target="hmcontent"><span class="heading2" id="s3.5">3.5 Bias</span></a>
+</li>
+<li class="heading2" id="i3.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.6" href="http://www.statsref.com/HTML/confounding.html" target="hmcontent"><span class="heading2" id="s3.6">3.6 Confounding</span></a>
+</li>
+<li class="heading2" id="i3.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.7" href="http://www.statsref.com/HTML/hypothesis_testing.html" target="hmcontent"><span class="heading2" id="s3.7">3.7 Hypothesis testing</span></a>
+</li>
+<li class="heading2" id="i3.8" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.8" href="http://www.statsref.com/HTML/types_of_error.html" target="hmcontent"><span class="heading2" id="s3.8">3.8 Types of error</span></a>
+</li>
+<li class="heading2" id="i3.9" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.9" href="http://www.statsref.com/HTML/statistical_significance.html" target="hmcontent"><span class="heading2" id="s3.9">3.9 Statistical significance</span></a>
+</li>
+<li class="heading2" id="i3.10" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.10" href="http://www.statsref.com/HTML/confidence_intervals.html" target="hmcontent"><span class="heading2" id="s3.10">3.10 Confidence intervals</span></a>
+</li>
+<li class="heading2" id="i3.11" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.11" href="http://www.statsref.com/HTML/power.html" target="hmcontent"><span class="heading2" id="s3.11">3.11 Power and robustness</span></a>
+</li>
+<li class="heading2" id="i3.12" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.12" href="http://www.statsref.com/HTML/degrees_of_freedom.html" target="hmcontent"><span class="heading2" id="s3.12">3.12 Degrees of freedom</span></a>
+</li>
+<li class="heading2" id="i3.13" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.13" href="http://www.statsref.com/HTML/non-parametric_analysis.html" target="hmcontent"><span class="heading2" id="s3.13">3.13 Non-parametric analysis</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i4" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading1" id="a4" href="http://www.statsref.com/HTML/descriptive_statistics.html" target="hmcontent"><span class="heading1" id="s4" ondblclick="return dblclicked(this)">4 Descriptive statistics</span></a>
+<ul id="ul4" style="list-style-type: none; display: none;">
+<li class="heading2" id="i4.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.1" href="http://www.statsref.com/HTML/counts_and_specific_values.html" target="hmcontent"><span class="heading2" id="s4.1">4.1 Counts and specific values</span></a>
+</li>
+<li class="heading2" id="i4.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.2" href="http://www.statsref.com/HTML/averages.html" target="hmcontent"><span class="heading2" id="s4.2">4.2 Measures of central tendency</span></a>
+</li>
+<li class="heading2" id="i4.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.3" href="http://www.statsref.com/HTML/measures_of_spread.html" target="hmcontent"><span class="heading2" id="s4.3">4.3 Measures of spread</span></a>
+</li>
+<li class="heading2" id="i4.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.4" href="http://www.statsref.com/HTML/measures_of_distribution_shape.html" target="hmcontent"><span class="heading2" id="s4.4">4.4 Measures of distribution shape</span></a>
+</li>
+<li class="heading2" id="i4.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.5" href="http://www.statsref.com/HTML/indices.html" target="hmcontent"><span class="heading2" id="s4.5">4.5 Statistical indices</span></a>
+</li>
+<li class="heading2" id="i4.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.6" href="http://www.statsref.com/HTML/moments.html" target="hmcontent"><span class="heading2" id="s4.6">4.6 Moments</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i5" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading1" id="a5" href="http://www.statsref.com/HTML/key_functions_and_expressions.html" target="hmcontent"><span class="heading1" id="s5" ondblclick="return dblclicked(this)">5 Key functions and expressions</span></a>
+<ul id="ul5" style="list-style-type: none; display: none;">
+<li class="heading2" id="i5.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a5.1" href="http://www.statsref.com/HTML/key_functions.html" target="hmcontent"><span class="heading2" id="s5.1">5.1 Key functions</span></a>
+</li>
+<li class="heading2" id="i5.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a5.2" href="http://www.statsref.com/HTML/measures_of_complexity_and_dim.html" target="hmcontent"><span class="heading2" id="s5.2">5.2 Measures of Complexity and Model selection</span></a>
+</li>
+<li class="heading2" id="i5.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a5.3" href="http://www.statsref.com/HTML/matrix_expressions.html" target="hmcontent"><span class="heading2" id="s5.3">5.3 Matrices</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i6" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading1" id="a6" href="http://www.statsref.com/HTML/data_transformation.html" target="hmcontent"><span class="heading1" id="s6" ondblclick="return dblclicked(this)">6 Data transformation and standardization</span></a>
+<ul id="ul6" style="list-style-type: none; display: none;">
+<li class="heading2" id="i6.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.1" href="http://www.statsref.com/HTML/box-cox.html" target="hmcontent"><span class="heading2" id="s6.1">6.1 Box-Cox and Power transforms</span></a>
+</li>
+<li class="heading2" id="i6.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.2" href="http://www.statsref.com/HTML/freeman-tukey.html" target="hmcontent"><span class="heading2" id="s6.2">6.2 Freeman-Tukey (square root and arcsine) transforms</span></a>
+</li>
+<li class="heading2" id="i6.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.3" href="http://www.statsref.com/HTML/log_transformation.html" target="hmcontent"><span class="heading2" id="s6.3">6.3 Log and Exponential transforms</span></a>
+</li>
+<li class="heading2" id="i6.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.4" href="http://www.statsref.com/HTML/logit.html" target="hmcontent"><span class="heading2" id="s6.4">6.4 Logit transform</span></a>
+</li>
+<li class="heading2" id="i6.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.5" href="http://www.statsref.com/HTML/normal_transform.html" target="hmcontent"><span class="heading2" id="s6.5">6.5 Normal transform (z-transform)</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i7" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading1" id="a7" href="http://www.statsref.com/HTML/data_exploration.html" target="hmcontent"><span class="heading1" id="s7" ondblclick="return dblclicked(this)">7 Data exploration</span></a>
+<ul id="ul7" style="list-style-type: none; display: none;">
+<li class="heading2" id="i7.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a7.1" href="http://www.statsref.com/HTML/graphics.html" target="hmcontent"><span class="heading2" id="s7.1">7.1 Graphics and vizualisation</span></a>
+</li>
+<li class="heading2" id="i7.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a7.2" href="http://www.statsref.com/HTML/exploratory_data_analysis.html" target="hmcontent"><span class="heading2" id="s7.2">7.2 Exploratory Data Analysis</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i8" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading1" id="a8" href="http://www.statsref.com/HTML/randomization.html" target="hmcontent"><span class="heading1" id="s8" ondblclick="return dblclicked(this)">8 Randomness and Randomization</span></a>
+<ul id="ul8" style="list-style-type: none; display: none;">
+<li class="heading2" id="i8.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.1" href="http://www.statsref.com/HTML/random_numbers.html" target="hmcontent"><span class="heading2" id="s8.1">8.1 Random numbers</span></a>
+</li>
+<li class="heading2" id="i8.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.2" href="http://www.statsref.com/HTML/random_permutations.html" target="hmcontent"><span class="heading2" id="s8.2">8.2 Random permutations</span></a>
+</li>
+<li class="heading2" id="i8.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.3" href="http://www.statsref.com/HTML/resampling.html" target="hmcontent"><span class="heading2" id="s8.3">8.3 Resampling</span></a>
+</li>
+<li class="heading2" id="i8.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.4" href="http://www.statsref.com/HTML/runs_test.html" target="hmcontent"><span class="heading2" id="s8.4">8.4 Runs test</span></a>
+</li>
+<li class="heading2" id="i8.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.5" href="http://www.statsref.com/HTML/random_walks.html" target="hmcontent"><span class="heading2" id="s8.5">8.5 Random walks</span></a>
+</li>
+<li class="heading2" id="i8.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.6" href="http://www.statsref.com/HTML/markov_processes.html" target="hmcontent"><span class="heading2" id="s8.6">8.6 Markov processes</span></a>
+</li>
+<li class="heading2" id="i8.7" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading2" id="a8.7" href="http://www.statsref.com/HTML/monte_carlo_methods2.html" target="hmcontent"><span class="heading2" id="s8.7" ondblclick="return dblclicked(this)">8.7 Monte Carlo methods</span></a>
+<ul id="ul8.7" style="list-style-type: none; display: none;">
+<li class="heading3" id="i8.7.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a8.7.1" href="http://www.statsref.com/HTML/monte_carlo_integration.html" target="hmcontent"><span class="heading3" id="s8.7.1">8.7.1 Monte Carlo Integration</span></a>
+</li>
+<li class="heading3" id="i8.7.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a8.7.2" href="http://www.statsref.com/HTML/monte_carlo_markov_chains.html" target="hmcontent"><span class="heading3" id="s8.7.2">8.7.2 Monte Carlo Markov Chains (MCMC)</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i9" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading1" id="a9" href="http://www.statsref.com/HTML/correlation.html" target="hmcontent"><span class="heading1" id="s9" ondblclick="return dblclicked(this)">9 Correlation and autocorrelation</span></a>
+<ul id="ul9" style="list-style-type: none; display: none;">
+<li class="heading2" id="i9.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.1" href="http://www.statsref.com/HTML/pearson_product_moment_correla.html" target="hmcontent"><span class="heading2" id="s9.1">9.1 Pearson (Product moment) correlation</span></a>
+</li>
+<li class="heading2" id="i9.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.2" href="http://www.statsref.com/HTML/rank_correlation.html" target="hmcontent"><span class="heading2" id="s9.2">9.2 Rank correlation</span></a>
+</li>
+<li class="heading2" id="i9.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.3" href="http://www.statsref.com/HTML/canonical_correlation.html" target="hmcontent"><span class="heading2" id="s9.3">9.3 Canonical correlation</span></a>
+</li>
+<li class="heading2" id="i9.4" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading2" id="a9.4" href="http://www.statsref.com/HTML/autocorrelation.html" target="hmcontent"><span class="heading2" id="s9.4" ondblclick="return dblclicked(this)">9.4 Autocorrelation</span></a>
+<ul id="ul9.4" style="list-style-type: none; display: none;">
+<li class="heading3" id="i9.4.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.4.1" href="http://www.statsref.com/HTML/temporal_autocorrelation.html" target="hmcontent"><span class="heading3" id="s9.4.1">9.4.1 Temporal autocorrelation</span></a>
+</li>
+<li class="heading3" id="i9.4.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a9.4.2" href="http://www.statsref.com/HTML/two_dimensional_spatial_autoco.html" target="hmcontent"><span class="heading3" id="s9.4.2">9.4.2 Spatial autocorrelation</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i10" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading1" id="a10" href="http://www.statsref.com/HTML/probability_distributions.html" target="hmcontent"><span class="heading1" id="s10" ondblclick="return dblclicked(this)">10 Probability distributions</span></a>
+<ul id="ul10" style="list-style-type: none; display: none;">
+<li class="heading2" id="i10.1" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading2" id="a10.1" href="http://www.statsref.com/HTML/discrete_distributions.html" target="hmcontent"><span class="heading2" id="s10.1" ondblclick="return dblclicked(this)">10.1 Discrete Distributions</span></a>
+<ul id="ul10.1" style="list-style-type: none; display: none;">
+<li class="heading3" id="i10.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a10.1.1" href="http://www.statsref.com/HTML/binomial.html" target="hmcontent"><span class="heading3" id="s10.1.1">10.1.1 Binomial distribution</span></a>
+</li>
+<li class="heading3" id="i10.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a10.1.2" href="http://www.statsref.com/HTML/hypergeometric.html" target="hmcontent"><span class="heading3" id="s10.1.2">10.1.2 Hypergeometric distribution</span></a>
+</li>
+<li class="heading3" id="i10.1.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a10.1.3" href="http://www.statsref.com/HTML/multinomial.html" target="hmcontent"><span class="heading3" id="s10.1.3">10.1.3 Multinomial distribution</span></a>
+</li>
+<li class="heading3" id="i10.1.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a10.1.4" href="http://www.statsref.com/HTML/negative_binomial.html" target="hmcontent"><span class="heading3" id="s10.1.4">10.1.4 Negative Binomial or Pascal and Geometric distribution</span></a>
+</li>
+<li class="heading3" id="i10.1.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a10.1.5" href="http://www.statsref.com/HTML/poisson.html" target="hmcontent"><span class="heading3" id="s10.1.5">10.1.5 Poisson distribution</span></a>
+</li>
+<li class="heading3" id="i10.1.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a10.1.6" href="http://www.statsref.com/HTML/skellam.html" target="hmcontent"><span class="heading3" id="s10.1.6">10.1.6 Skellam distribution</span></a>
+</li>
+<li class="heading3" id="i10.1.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a10.1.7" href="http://www.statsref.com/HTML/zipf.html" target="hmcontent"><span class="heading3" id="s10.1.7">10.1.7 Zipf or Zeta distribution</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i10.2" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading2" id="a10.2" href="http://www.statsref.com/HTML/continuous_univariate_distribu.html" target="hmcontent"><span class="heading2" id="s10.2" ondblclick="return dblclicked(this)">10.2 Continuous univariate distributions</span></a>
+<ul id="ul10.2" style="list-style-type: none; display: none;">
+<li class="heading3" id="i10.2.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a10.2.1" href="http://www.statsref.com/HTML/beta.html" target="hmcontent"><span class="heading3" id="s10.2.1">10.2.1 Beta distribution</span></a>
+</li>
+<li class="heading3" id="i10.2.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a10.2.2" href="http://www.statsref.com/HTML/chi-square.html" target="hmcontent"><span class="heading3" id="s10.2.2">10.2.2 Chi-Square distribution</span></a>
+</li>
+<li class="heading3" id="i10.2.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a10.2.3" href="http://www.statsref.com/HTML/cauchy_distribution.html" target="hmcontent"><span class="heading3" id="s10.2.3">10.2.3 Cauchy distribution</span></a>
+</li>
+<li class="heading3" id="i10.2.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a10.2.4" href="http://www.statsref.com/HTML/erlang.html" target="hmcontent"><span class="heading3" id="s10.2.4">10.2.4 Erlang distribution</span></a>
+</li>
+<li class="heading3" id="i10.2.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a10.2.5" href="http://www.statsref.com/HTML/exponential.html" target="hmcontent"><span class="heading3" id="s10.2.5">10.2.5 Exponential distribution</span></a>
+</li>
+<li class="heading3" id="i10.2.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a10.2.6" href="http://www.statsref.com/HTML/f.html" target="hmcontent"><span class="heading3" id="s10.2.6">10.2.6 F distribution</span></a>
+</li>
+<li class="heading3" id="i10.2.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a10.2.7" href="http://www.statsref.com/HTML/gamma.html" target="hmcontent"><span class="heading3" id="s10.2.7">10.2.7 Gamma distribution</span></a>
+</li>
+<li class="heading3" id="i10.2.8" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a10.2.8" href="http://www.statsref.com/HTML/gumbel_extreme_value_distribut.html" target="hmcontent"><span class="heading3" id="s10.2.8">10.2.8 Gumbel and extreme value distributions</span></a>
+</li>
+<li class="heading3" id="i10.2.9" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a10.2.9" href="http://www.statsref.com/HTML/normal_distribution.html" target="hmcontent"><span class="heading3" id="s10.2.9">10.2.9 Normal distribution</span></a>
+</li>
+<li class="heading3" id="i10.2.10" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a10.2.10" href="http://www.statsref.com/HTML/pareto.html" target="hmcontent"><span class="heading3" id="s10.2.10">10.2.10 Pareto distribution</span></a>
+</li>
+<li class="heading3" id="i10.2.11" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a10.2.11" href="http://www.statsref.com/HTML/t_distribution.html" target="hmcontent"><span class="heading3" id="s10.2.11">10.2.11 Student's t-distribution (Fisher's distribution)</span></a>
+</li>
+<li class="heading3" id="i10.2.12" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a10.2.12" href="http://www.statsref.com/HTML/uniform_distribution.html" target="hmcontent"><span class="heading3" id="s10.2.12">10.2.12 Uniform distribution</span></a>
+</li>
+<li class="heading3" id="i10.2.13" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a10.2.13" href="http://www.statsref.com/HTML/von_mises.html" target="hmcontent"><span class="heading3" id="s10.2.13">10.2.13 von Mises distribution</span></a>
+</li>
+<li class="heading3" id="i10.2.14" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a10.2.14" href="http://www.statsref.com/HTML/weibull.html" target="hmcontent"><span class="heading3" id="s10.2.14">10.2.14 Weibull distribution</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i10.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a10.3" href="http://www.statsref.com/HTML/multivariate_distributions.html" target="hmcontent"><span class="heading2" id="s10.3">10.3 Multivariate distributions</span></a>
+</li>
+<li class="heading2" id="i10.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a10.4" href="http://www.statsref.com/HTML/kernel_density_estimation.html" target="hmcontent"><span class="heading2" id="s10.4">10.4 Kernel Density Estimation</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i11" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon2.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading1" id="a11" href="http://www.statsref.com/HTML/estimation.html" target="hmcontent"><span class="heading1" id="s11" ondblclick="return dblclicked(this)">11 Estimation and estimators</span></a>
+<ul id="ul11" style="list-style-type: none; display: block;">
+<li class="heading2" id="i11.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a11.1" href="http://www.statsref.com/HTML/maximum_likelihhood_estimation.html" target="hmcontent"><span class="hilight2" id="s11.1">11.1 Maximum Likelihood Estimation (MLE)</span></a>
+</li>
+<li class="heading2" id="i11.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a11.2" href="http://www.statsref.com/HTML/reursive_estimation.html" target="hmcontent"><span class="heading2" id="s11.2">11.2 Bayesian estimation</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i12" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading1" id="a12" href="http://www.statsref.com/HTML/classical_tests.html" target="hmcontent"><span class="heading1" id="s12" ondblclick="return dblclicked(this)">12 Classical tests</span></a>
+<ul id="ul12" style="list-style-type: none; display: none;">
+<li class="heading2" id="i12.1" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading2" id="a12.1" href="http://www.statsref.com/HTML/goodness_of_fit_tests.html" target="hmcontent"><span class="heading2" id="s12.1" ondblclick="return dblclicked(this)">12.1 Goodness of fit tests</span></a>
+<ul id="ul12.1" style="list-style-type: none; display: none;">
+<li class="heading3" id="i12.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a12.1.1" href="http://www.statsref.com/HTML/anderson-darling.html" target="hmcontent"><span class="heading3" id="s12.1.1">12.1.1 Anderson-Darling</span></a>
+</li>
+<li class="heading3" id="i12.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a12.1.2" href="http://www.statsref.com/HTML/chi-square2.html" target="hmcontent"><span class="heading3" id="s12.1.2">12.1.2 Chi-square test</span></a>
+</li>
+<li class="heading3" id="i12.1.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a12.1.3" href="http://www.statsref.com/HTML/komogorov-smirnov.html" target="hmcontent"><span class="heading3" id="s12.1.3">12.1.3 Kolmogorov-Smirnov</span></a>
+</li>
+<li class="heading3" id="i12.1.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a12.1.4" href="http://www.statsref.com/HTML/ryan-joiner.html" target="hmcontent"><span class="heading3" id="s12.1.4">12.1.4 Ryan-Joiner</span></a>
+</li>
+<li class="heading3" id="i12.1.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a12.1.5" href="http://www.statsref.com/HTML/shapiro-wilk.html" target="hmcontent"><span class="heading3" id="s12.1.5">12.1.5 Shapiro-Wilk</span></a>
+</li>
+<li class="heading3" id="i12.1.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a12.1.6" href="http://www.statsref.com/HTML/jarque-bera.html" target="hmcontent"><span class="heading3" id="s12.1.6">12.1.6 Jarque-Bera</span></a>
+</li>
+<li class="heading3" id="i12.1.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a12.1.7" href="http://www.statsref.com/HTML/lilliefors.html" target="hmcontent"><span class="heading3" id="s12.1.7">12.1.7 Lilliefors</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i12.2" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading2" id="a12.2" href="http://www.statsref.com/HTML/z-tests.html" target="hmcontent"><span class="heading2" id="s12.2" ondblclick="return dblclicked(this)">12.2 Z-tests</span></a>
+<ul id="ul12.2" style="list-style-type: none; display: none;">
+<li class="heading3" id="i12.2.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a12.2.1" href="http://www.statsref.com/HTML/test_for_mean_when_standard_de_2.html" target="hmcontent"><span class="heading3" id="s12.2.1">12.2.1 Test of a single mean, standard deviation known</span></a>
+</li>
+<li class="heading3" id="i12.2.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a12.2.2" href="http://www.statsref.com/HTML/test_for_mean_when_standard_de.html" target="hmcontent"><span class="heading3" id="s12.2.2">12.2.2 Test of the difference between two means, standard deviations known</span></a>
+</li>
+<li class="heading3" id="i12.2.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a12.2.3" href="http://www.statsref.com/HTML/tests_for_proportions__p.html" target="hmcontent"><span class="heading3" id="s12.2.3">12.2.3 Tests for proportions, p</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i12.3" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading2" id="a12.3" href="http://www.statsref.com/HTML/t-tests.html" target="hmcontent"><span class="heading2" id="s12.3" ondblclick="return dblclicked(this)">12.3 T-tests</span></a>
+<ul id="ul12.3" style="list-style-type: none; display: none;">
+<li class="heading3" id="i12.3.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a12.3.1" href="http://www.statsref.com/HTML/single_mean__standard_deviatio.html" target="hmcontent"><span class="heading3" id="s12.3.1">12.3.1 Test of a single mean, standard deviation not known</span></a>
+</li>
+<li class="heading3" id="i12.3.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a12.3.2" href="http://www.statsref.com/HTML/difference_between_two_means__.html" target="hmcontent"><span class="heading3" id="s12.3.2">12.3.2 Test of the difference between two means, standard deviation not known</span></a>
+</li>
+<li class="heading3" id="i12.3.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a12.3.3" href="http://www.statsref.com/HTML/test_of_regression_coefficient.html" target="hmcontent"><span class="heading3" id="s12.3.3">12.3.3 Test of regression coefficients</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i12.4" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading2" id="a12.4" href="http://www.statsref.com/HTML/variance_tests.html" target="hmcontent"><span class="heading2" id="s12.4" ondblclick="return dblclicked(this)">12.4 Variance tests</span></a>
+<ul id="ul12.4" style="list-style-type: none; display: none;">
+<li class="heading3" id="i12.4.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a12.4.1" href="http://www.statsref.com/HTML/chi-square_test.html" target="hmcontent"><span class="heading3" id="s12.4.1">12.4.1 Chi-square test of a single variance</span></a>
+</li>
+<li class="heading3" id="i12.4.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a12.4.2" href="http://www.statsref.com/HTML/f-tests.html" target="hmcontent"><span class="heading3" id="s12.4.2">12.4.2 F-tests of two variances</span></a>
+</li>
+<li class="heading3" id="i12.4.3" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading3" id="a12.4.3" href="http://www.statsref.com/HTML/tests_of_homogeneity.html" target="hmcontent"><span class="heading3" id="s12.4.3" ondblclick="return dblclicked(this)">12.4.3 Tests of homogeneity</span></a>
+<ul id="ul12.4.3" style="list-style-type: none; display: none;">
+<li class="heading4" id="i12.4.3.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a12.4.3.1" href="http://www.statsref.com/HTML/bartletts_m_test.html" target="hmcontent"><span class="heading4" id="s12.4.3.1">12.4.3.1 Bartlett's M test</span></a>
+</li>
+<li class="heading4" id="i12.4.3.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a12.4.3.2" href="http://www.statsref.com/HTML/brown-forsythe_test.html" target="hmcontent"><span class="heading4" id="s12.4.3.2">12.4.3.2 Levene-Brown-Forsythe test</span></a>
+</li>
+<li class="heading4" id="i12.4.3.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a12.4.3.3" href="http://www.statsref.com/HTML/fligner-killeen_test.html" target="hmcontent"><span class="heading4" id="s12.4.3.3">12.4.3.3 Fligner-Killeen test</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i12.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a12.5" href="http://www.statsref.com/HTML/wilcoxon_rank-sum.html" target="hmcontent"><span class="heading2" id="s12.5">12.5 Wilcoxon rank-sum/Mann-Whitney U test</span></a>
+</li>
+<li class="heading2" id="i12.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a12.6" href="http://www.statsref.com/HTML/sign_tests.html" target="hmcontent"><span class="heading2" id="s12.6">12.6 Sign test</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i13" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading1" id="a13" href="http://www.statsref.com/HTML/contingency_tables.html" target="hmcontent"><span class="heading1" id="s13" ondblclick="return dblclicked(this)">13 Contingency tables</span></a>
+<ul id="ul13" style="list-style-type: none; display: none;">
+<li class="heading2" id="i13.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a13.1" href="http://www.statsref.com/HTML/chi-square_contingency_table_t.html" target="hmcontent"><span class="heading2" id="s13.1">13.1 Chi-square contingency table test</span></a>
+</li>
+<li class="heading2" id="i13.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a13.2" href="http://www.statsref.com/HTML/g_contingency_table_test.html" target="hmcontent"><span class="heading2" id="s13.2">13.2 G contingency table test</span></a>
+</li>
+<li class="heading2" id="i13.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a13.3" href="http://www.statsref.com/HTML/fishers_exact_test.html" target="hmcontent"><span class="heading2" id="s13.3">13.3 Fisher's exact test</span></a>
+</li>
+<li class="heading2" id="i13.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a13.4" href="http://www.statsref.com/HTML/measures_of_association.html" target="hmcontent"><span class="heading2" id="s13.4">13.4 Measures of association</span></a>
+</li>
+<li class="heading2" id="i13.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a13.5" href="http://www.statsref.com/HTML/mcnemars_test.html" target="hmcontent"><span class="heading2" id="s13.5">13.5 McNemar's test</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i14" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading1" id="a14" href="http://www.statsref.com/HTML/design_of_experiments.html" target="hmcontent"><span class="heading1" id="s14" ondblclick="return dblclicked(this)">14 Design of experiments</span></a>
+<ul id="ul14" style="list-style-type: none; display: none;">
+<li class="heading2" id="i14.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a14.1" href="http://www.statsref.com/HTML/completely_randomized_designs.html" target="hmcontent"><span class="heading2" id="s14.1">14.1 Completely randomized designs</span></a>
+</li>
+<li class="heading2" id="i14.2" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading2" id="a14.2" href="http://www.statsref.com/HTML/randomized_block_designs.html" target="hmcontent"><span class="heading2" id="s14.2" ondblclick="return dblclicked(this)">14.2 Randomized block designs</span></a>
+<ul id="ul14.2" style="list-style-type: none; display: none;">
+<li class="heading3" id="i14.2.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a14.2.1" href="http://www.statsref.com/HTML/latin_sqaures.html" target="hmcontent"><span class="heading3" id="s14.2.1">14.2.1 Latin squares</span></a>
+</li>
+<li class="heading3" id="i14.2.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a14.2.2" href="http://www.statsref.com/HTML/graeco-latin_sqaures.html" target="hmcontent"><span class="heading3" id="s14.2.2">14.2.2 Graeco-Latin squares</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i14.3" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading2" id="a14.3" href="http://www.statsref.com/HTML/factorial_designs.html" target="hmcontent"><span class="heading2" id="s14.3" ondblclick="return dblclicked(this)">14.3 Factorial designs</span></a>
+<ul id="ul14.3" style="list-style-type: none; display: none;">
+<li class="heading3" id="i14.3.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a14.3.1" href="http://www.statsref.com/HTML/full_factorial_designs.html" target="hmcontent"><span class="heading3" id="s14.3.1">14.3.1 Full Factorial designs</span></a>
+</li>
+<li class="heading3" id="i14.3.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a14.3.2" href="http://www.statsref.com/HTML/fractional_factorial_designs.html" target="hmcontent"><span class="heading3" id="s14.3.2">14.3.2 Fractional Factorial designs</span></a>
+</li>
+<li class="heading3" id="i14.3.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a14.3.3" href="http://www.statsref.com/HTML/plackett-burman_designs.html" target="hmcontent"><span class="heading3" id="s14.3.3">14.3.3 Plackett-Burman designs</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i14.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a14.4" href="http://www.statsref.com/HTML/regression_designs_and_respons.html" target="hmcontent"><span class="heading2" id="s14.4">14.4 Regression designs and response surfaces</span></a>
+</li>
+<li class="heading2" id="i14.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a14.5" href="http://www.statsref.com/HTML/mixture_designs.html" target="hmcontent"><span class="heading2" id="s14.5">14.5 Mixture designs</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i15" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading1" id="a15" href="http://www.statsref.com/HTML/analysis_of_variance_and_covar.html" target="hmcontent"><span class="heading1" id="s15" ondblclick="return dblclicked(this)">15 Analysis of variance and covariance</span></a>
+<ul id="ul15" style="list-style-type: none; display: none;">
+<li class="heading2" id="i15.1" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading2" id="a15.1" href="http://www.statsref.com/HTML/anova.html" target="hmcontent"><span class="heading2" id="s15.1" ondblclick="return dblclicked(this)">15.1 ANOVA</span></a>
+<ul id="ul15.1" style="list-style-type: none; display: none;">
+<li class="heading3" id="i15.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a15.1.1" href="http://www.statsref.com/HTML/single_factor.html" target="hmcontent"><span class="heading3" id="s15.1.1">15.1.1 Single factor or one-way ANOVA</span></a>
+</li>
+<li class="heading3" id="i15.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a15.1.2" href="http://www.statsref.com/HTML/two_factor.html" target="hmcontent"><span class="heading3" id="s15.1.2">15.1.2 Two factor or two-way and higher-way ANOVA</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i15.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a15.2" href="http://www.statsref.com/HTML/mananova.html" target="hmcontent"><span class="heading2" id="s15.2">15.2 MANOVA</span></a>
+</li>
+<li class="heading2" id="i15.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a15.3" href="http://www.statsref.com/HTML/ancova.html" target="hmcontent"><span class="heading2" id="s15.3">15.3 ANCOVA</span></a>
+</li>
+<li class="heading2" id="i15.4" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading2" id="a15.4" href="http://www.statsref.com/HTML/non-parametric_anova.html" target="hmcontent"><span class="heading2" id="s15.4" ondblclick="return dblclicked(this)">15.4 Non-Parametric ANOVA</span></a>
+<ul id="ul15.4" style="list-style-type: none; display: none;">
+<li class="heading3" id="i15.4.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a15.4.1" href="http://www.statsref.com/HTML/k-w_tests.html" target="hmcontent"><span class="heading3" id="s15.4.1">15.4.1 Kruskal-Wallis ANOVA</span></a>
+</li>
+<li class="heading3" id="i15.4.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a15.4.2" href="http://www.statsref.com/HTML/friedman_test2.html" target="hmcontent"><span class="heading3" id="s15.4.2">15.4.2 Friedman ANOVA test</span></a>
+</li>
+<li class="heading3" id="i15.4.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a15.4.3" href="http://www.statsref.com/HTML/moods_median.html" target="hmcontent"><span class="heading3" id="s15.4.3">15.4.3 Mood's Median</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i16" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading1" id="a16" href="http://www.statsref.com/HTML/regression.html" target="hmcontent"><span class="heading1" id="s16" ondblclick="return dblclicked(this)">16 Regression and smoothing</span></a>
+<ul id="ul16" style="list-style-type: none; display: none;">
+<li class="heading2" id="i16.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a16.1" href="http://www.statsref.com/HTML/least_squares.html" target="hmcontent"><span class="heading2" id="s16.1">16.1 Least squares</span></a>
+</li>
+<li class="heading2" id="i16.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a16.2" href="http://www.statsref.com/HTML/ridge_regression.html" target="hmcontent"><span class="heading2" id="s16.2">16.2 Ridge regression</span></a>
+</li>
+<li class="heading2" id="i16.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a16.3" href="http://www.statsref.com/HTML/simple_regression.html" target="hmcontent"><span class="heading2" id="s16.3">16.3 Simple and multiple linear regression</span></a>
+</li>
+<li class="heading2" id="i16.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a16.4" href="http://www.statsref.com/HTML/polynomial_regression.html" target="hmcontent"><span class="heading2" id="s16.4">16.4 Polynomial regression</span></a>
+</li>
+<li class="heading2" id="i16.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a16.5" href="http://www.statsref.com/HTML/glim.html" target="hmcontent"><span class="heading2" id="s16.5">16.5 Generalized Linear Models (GLIM)</span></a>
+</li>
+<li class="heading2" id="i16.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a16.6" href="http://www.statsref.com/HTML/logistic_regression.html" target="hmcontent"><span class="heading2" id="s16.6">16.6 Logistic regression for proportion data</span></a>
+</li>
+<li class="heading2" id="i16.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a16.7" href="http://www.statsref.com/HTML/poisson_regression.html" target="hmcontent"><span class="heading2" id="s16.7">16.7 Poisson regression for count data</span></a>
+</li>
+<li class="heading2" id="i16.8" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a16.8" href="http://www.statsref.com/HTML/non-linear_regression.html" target="hmcontent"><span class="heading2" id="s16.8">16.8 Non-linear regression</span></a>
+</li>
+<li class="heading2" id="i16.9" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a16.9" href="http://www.statsref.com/HTML/smoothing.html" target="hmcontent"><span class="heading2" id="s16.9">16.9 Smoothing and Generalized Additive Models (GAM)</span></a>
+</li>
+<li class="heading2" id="i16.10" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a16.10" href="http://www.statsref.com/HTML/geographically_weighted_regres.html" target="hmcontent"><span class="heading2" id="s16.10">16.10 Geographically weighted regression (GWR)</span></a>
+</li>
+<li class="heading2" id="i16.11" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading2" id="a16.11" href="http://www.statsref.com/HTML/autoregression.html" target="hmcontent"><span class="heading2" id="s16.11" ondblclick="return dblclicked(this)">16.11 Spatial series and spatial autoregression</span></a>
+<ul id="ul16.11" style="list-style-type: none; display: none;">
+<li class="heading3" id="i16.11.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.11.1" href="http://www.statsref.com/HTML/sar_models.html" target="hmcontent"><span class="heading3" id="s16.11.1">16.11.1 SAR models</span></a>
+</li>
+<li class="heading3" id="i16.11.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.11.2" href="http://www.statsref.com/HTML/car_models.html" target="hmcontent"><span class="heading3" id="s16.11.2">16.11.2 CAR models</span></a>
+</li>
+<li class="heading3" id="i16.11.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a16.11.3" href="http://www.statsref.com/HTML/spatial_filtering_models.html" target="hmcontent"><span class="heading3" id="s16.11.3">16.11.3 Spatial filtering models</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i17" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading1" id="a17" href="http://www.statsref.com/HTML/time_series_analysis.html" target="hmcontent"><span class="heading1" id="s17" ondblclick="return dblclicked(this)">17 Time series analysis and temporal autoregression</span></a>
+<ul id="ul17" style="list-style-type: none; display: none;">
+<li class="heading2" id="i17.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a17.1" href="http://www.statsref.com/HTML/moving_averages.html" target="hmcontent"><span class="heading2" id="s17.1">17.1 Moving averages</span></a>
+</li>
+<li class="heading2" id="i17.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a17.2" href="http://www.statsref.com/HTML/trend_analysis2.html" target="hmcontent"><span class="heading2" id="s17.2">17.2 Trend Analysis</span></a>
+</li>
+<li class="heading2" id="i17.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a17.3" href="http://www.statsref.com/HTML/arima.html" target="hmcontent"><span class="heading2" id="s17.3">17.3 ARMA and ARIMA (Box-Jenkins) models</span></a>
+</li>
+<li class="heading2" id="i17.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a17.4" href="http://www.statsref.com/HTML/spectral_analysis.html" target="hmcontent"><span class="heading2" id="s17.4">17.4 Spectral analysis</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i18" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading1" id="a18" href="http://www.statsref.com/HTML/resources.html" target="hmcontent"><span class="heading1" id="s18" ondblclick="return dblclicked(this)">18 Resources</span></a>
+<ul id="ul18" style="list-style-type: none; display: none;">
+<li class="heading2" id="i18.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a18.1" href="http://www.statsref.com/HTML/distribution_tables.html" target="hmcontent"><span class="heading2" id="s18.1">18.1 Distribution tables</span></a>
+</li>
+<li class="heading2" id="i18.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a18.2" href="http://www.statsref.com/HTML/bibliography.html" target="hmcontent"><span class="heading2" id="s18.2">18.2 Bibliography</span></a>
+</li>
+<li class="heading2" id="i18.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a18.3" href="http://www.statsref.com/HTML/software_.html" target="hmcontent"><span class="heading2" id="s18.3">18.3 Statistical Software</span></a>
+</li>
+<li class="heading2" id="i18.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a18.4" href="http://www.statsref.com/HTML/test_datasets.html" target="hmcontent"><span class="heading2" id="s18.4">18.4 Test Datasets and data archives</span></a>
+</li>
+<li class="heading2" id="i18.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a18.5" href="http://www.statsref.com/HTML/websites.html" target="hmcontent"><span class="heading2" id="s18.5">18.5 Websites</span></a>
+</li>
+<li class="heading2" id="i18.6" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading2" id="a18.6" href="http://www.statsref.com/HTML/methods_index.html" target="hmcontent"><span class="heading2" id="s18.6" ondblclick="return dblclicked(this)">18.6 Tests Index</span></a>
+<ul id="ul18.6" style="list-style-type: none; display: none;">
+<li class="heading3" id="i18.6.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a18.6.1" href="http://www.statsref.com/HTML/tests_and_confidence_intervals.html" target="hmcontent"><span class="heading3" id="s18.6.1">18.6.1 Tests and confidence intervals for mean values</span></a>
+</li>
+<li class="heading3" id="i18.6.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a18.6.2" href="http://www.statsref.com/HTML/test_for_proportions.html" target="hmcontent"><span class="heading3" id="s18.6.2">18.6.2 Tests for proportions</span></a>
+</li>
+<li class="heading3" id="i18.6.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a18.6.3" href="http://www.statsref.com/HTML/tests_and_confidence_interval2.html" target="hmcontent"><span class="heading3" id="s18.6.3">18.6.3 Tests and confidence intervals for the spread of datasets</span></a>
+</li>
+<li class="heading3" id="i18.6.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a18.6.4" href="http://www.statsref.com/HTML/tests_of_randomness.html" target="hmcontent"><span class="heading3" id="s18.6.4">18.6.4 Tests of randomness</span></a>
+</li>
+<li class="heading3" id="i18.6.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a18.6.5" href="http://www.statsref.com/HTML/test_of_fit_to_a_given_distrib.html" target="hmcontent"><span class="heading3" id="s18.6.5">18.6.5 Tests of fit to a given distribution</span></a>
+</li>
+<li class="heading3" id="i18.6.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a18.6.6" href="http://www.statsref.com/HTML/contingency_table_tests.html" target="hmcontent"><span class="heading3" id="s18.6.6">18.6.6 Tests for cross-tabulated count data</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i18.7" data-bg="cicon1.gif;cicon2.gif" style="background: url(&quot;cicon1.gif&quot;) no-repeat; cursor: pointer; padding-left: 20px;" onclick="return clicked(this,event)"><a class="heading2" id="a18.7" href="http://www.statsref.com/HTML/r_code_samples.html" target="hmcontent"><span class="heading2" id="s18.7" ondblclick="return dblclicked(this)">18.7 R Code samples</span></a>
+<ul id="ul18.7" style="list-style-type: none; display: none;">
+<li class="heading3" id="i18.7.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a18.7.1" href="http://www.statsref.com/HTML/scatter_plot_inequality.html" target="hmcontent"><span class="heading3" id="s18.7.1">18.7.1 Scatter Plot: Inequality</span></a>
+</li>
+<li class="heading3" id="i18.7.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a18.7.2" href="http://www.statsref.com/HTML/latin_square_anova.html" target="hmcontent"><span class="heading3" id="s18.7.2">18.7.2 Latin Square ANOVA</span></a>
+</li>
+<li class="heading3" id="i18.7.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a18.7.3" href="http://www.statsref.com/HTML/log_odds_ratio_plot.html" target="hmcontent"><span class="heading3" id="s18.7.3">18.7.3 Log Odds Ratio Plot</span></a>
+</li>
+<li class="heading3" id="i18.7.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a18.7.4" href="http://www.statsref.com/HTML/normal_distribution_plot.html" target="hmcontent"><span class="heading3" id="s18.7.4">18.7.4 Normal distribution plot</span></a>
+</li>
+<li class="heading3" id="i18.7.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a18.7.5" href="http://www.statsref.com/HTML/bootstrapping.html" target="hmcontent"><span class="heading3" id="s18.7.5">18.7.5 Bootstrapping</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i19" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a19" href="http://www.statsref.com/HTML/afterword_big_data.html" target="hmcontent"><span class="heading1" id="s19">19 Afterword: Big Data</span></a>
+</li>
+</ul>
+<script type="text/javascript">loadicons('cicon2.gif','cicon1.gif','cicon9.gif');</script>
+<a href="http://www.drmz.net/ga/sa.html" target="blank"><img src="./statsrefcoverbutton.png" width="200"></a>
+
+
+
+
+
+
+
+
+</body></html>

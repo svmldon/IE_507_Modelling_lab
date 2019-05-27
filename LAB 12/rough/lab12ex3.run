@@ -1,0 +1,5 @@
+reset;
+model lab12ex3.mod;
+data lab12ex3.run;
+option solver snopt;
+solve;

@@ -1,0 +1,8 @@
+reset;
+option solver gurobi;
+model lab03ex4.mod;
+data lab03ex4.dat;
+solve;
+display X;
+display Y;
+display Z;

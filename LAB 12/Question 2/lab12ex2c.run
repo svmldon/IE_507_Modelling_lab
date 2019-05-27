@@ -1,0 +1,6 @@
+reset;
+model lab12ex2c.mod;
+data lab12ex2c.dat;
+option solver snopt;
+solve;
+display {x in facility,y in location}position[x,y];

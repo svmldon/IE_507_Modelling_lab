@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)http://www.statsref.com/HTML/maximum_likelihhood_estimation.html -->
+<html class="nonscroll"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Estimation and estimators &gt; Maximum Likelihood Estimation (MLE)</title>
+   <meta name="generator" content="Help &amp; Manual">
+   <meta name="keywords" content="">
+   
+   <link type="text/css" href="./default.css" rel="stylesheet">
+   <link type="text/css" href="./custom.css" rel="stylesheet">
+
+   <style type="text/css" media="screen"> 
+      body { margin:0; 
+             padding:0; 
+             overflow: auto; 
+             background: #FFFFFF; 
+       } 
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: red;}
+      #callout-table a:visited {text-decoration: none; color: red;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+   </style>   
+
+   <script type="text/javascript" src="./jquery.js.download"></script>
+   <script type="text/javascript" src="./helpman_settings.js.download"></script>
+   <script type="text/javascript" src="./helpman_topicinit.js.download"></script>
+   <script type="text/javascript" src="./nsh.js.download"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "maximum_likelihhood_estimation.html");
+   </script>
+   <script type="text/javascript" src="./highlight.js.download"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body class="nonscroll">
+<div id="breadcrumbs" style="display:none"><a href="http://www.statsref.com/HTML/estimation.html">Estimation and estimators</a></div>
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Maximum Likelihood Estimation (MLE)</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;background:url(background-topic-header.jpg)" cellspacing="0" cellpadding="0"> 
+  <tbody><tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   
+   <a href="http://www.statsref.com/HTML/estimation.html">Estimation and estimators</a>&nbsp;&gt;</p>
+   <h1 class="p_Heading1"><span class="f_Heading1">Maximum Likelihood Estimation (MLE)</span></h1>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <a href="http://www.statsref.com/HTML/estimation.html" onmouseover="document.images.prev.src=&#39;hm_btn_navigate_prev_orange.png&#39;" onmouseout="document.images.prev.src=&#39;hm_btn_navigate_prev.png&#39;"><img name="prev" src="./hm_btn_navigate_prev.png" border="0" alt="Previous page"></a><a href="http://www.statsref.com/HTML/estimation.html" onmouseover="document.images.main.src=&#39;hm_btn_navigate_top_orange.png&#39;" onmouseout="document.images.main.src=&#39;hm_btn_navigate_top.png&#39;"><img name="main" src="./hm_btn_navigate_top.png" border="0" alt="Return to chapter overview"></a><a href="http://www.statsref.com/HTML/reursive_estimation.html" onmouseover="document.images.next.src=&#39;hm_btn_navigate_next_orange.png&#39;" onmouseout="document.images.next.src=&#39;hm_btn_navigate_next.png&#39;"><img name="next" src="./hm_btn_navigate_next.png" border="0" alt="Next page"></a>
+    </td>
+  </tr>  
+</tbody></table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+
+</div>  
+
+
+
+<div id="idcontent" class="nonscroll" style="height: 472px;"><div id="innerdiv"> 
+<!--ZOOMRESTART-->
+<p>If we have a probability distribution, P(<span style="font-style: italic;">x</span>), whose form is determined by one or more parameters, θ, we can write this as P(<span style="font-style: italic;">x</span>; θ) or P(<span style="font-style: italic;">x | </span>θ). This distribution provides the probability of an event, <span style="font-style: italic;">x</span>, occurring given the parameter(s), θ. Now suppose we have a set of data, {<span style="font-style: italic;">x</span>}, which we know or assume have been drawn from the probability distribution, P(<span style="font-style: italic;">x</span>; θ). We could ask “how likely is it that we would obtain this data from P?”. If we knew θ we could perform this calculation. However, if we do not know θ we could try a range of values for θ and choose the value that is most likely, or has maximum likelihood of being the true value of θ given the data. This process is a simplified description of maximum likelihood estimation (MLE). </p>
+<p class="p_Overview" style="border-top: none; border-right: none; border-left: none;"><span class="f_Overview">Example: Coin tossing</span></p>
+<p>To illustrate this idea, we shall use the <a href="http://www.statsref.com/HTML/binomial.html" class="topiclink">Binomial</a> distribution, B(<span style="font-style: italic;">x</span>;<span style="font-style: italic;">p</span>), where <span style="font-style: italic;">p</span> is the probability of an event (e.g. heads, when a coin is tossed). Let us suppose that we have a sample of 100 tosses of a coin, and we find 45 turn up as heads. From the Binomial we have the probability of 45 heads as:</p>
+<p><img src="./embim477.gif" width="237" height="30" style="margin:1px; border:none" alt=""></p>
+<p>Note that the first part of the expression is a constant, so if we are seeking the value of <span style="font-style: italic;">p</span> that maximizes this expression we can ignore the constant term. However, for now we will include it and compute the expression for <span style="font-style: italic;">p</span> in the range [0.25,0.65] in steps of 0.025, and then plot this data on a graph (see below). The result is a line graph with a single maximum value (maximum likelihood) at <span style="font-style: italic;">p</span>=0.45, which is intuitively what we expect. We can state this more formally: the proportion of successes, <span style="font-style: italic;">x</span>/<span style="font-style: italic;">n</span>, in a trial of size <span style="font-style: italic;">n</span> drawn from a Binomial distribution, is the maximum likelihood estimator of <span style="font-style: italic;">p</span>. Where above we wrote the <span style="font-style: italic;">probability</span> of <span style="font-style: italic;">x</span> given θ as P(<span style="font-style: italic;">x</span>; θ), we can now write the <span style="font-style: italic;">likelihood</span> of θ given <span style="font-style: italic;">x</span> as L(θ;<span style="font-style: italic;">x</span>). Note that if θ is given (or found by other means, such as from the moments or using least squares methods) then the likelihood can still be calculated and used, if required, in model comparison computations (such as in <a href="http://www.statsref.com/HTML/measures_of_complexity_and_dim.html#aikaikeinformationcriterion" class="topiclink">AIC/SIC</a> expressions).</p>
+<p class="p_ImageCaption"><span class="f_ImageCaption">Maximum likelihood estimation (MLE) – Binomial data</span></p>
+<p class="p_Image"><img src="./embim478.gif" width="588" height="316" style="margin:1px; border:none" alt=""></p>
+<p>Instead of evaluating the distribution by incrementing <span style="font-style: italic;">p</span>, we could have used differential calculus to find the maximum (or minimum) value of this function. It is often more convenient to maximize the log, log(<span style="font-style: italic;">L</span>) of the likelihood function, or minimize –log(<span style="font-style: italic;">L</span>), as these are equivalent. There are two advantages to using log(<span style="font-style: italic;">L</span>): the first is that products become sum and ratios becomes differences, which are often easier to work with; and second, very small numbers can be problematic with ratios and in some product calculations (especially with large sample problems), whereas they are much better behaved when logs are used. The log of the likelihood graph above is shown in the following graph, with logs base <span style="font-style: italic;">e</span> taken - as can be seen, the log(<span style="font-style: italic;">L</span>) function retains the overall form of the original function, enabling maximization or minimization to proceed as before.</p>
+<p class="p_ImageCaption"><span class="f_ImageCaption">Maximum log likelihood (LL) estimation – Binomial data</span></p>
+<p class="p_Image"><img src="./embim479.gif" width="588" height="316" style="margin:1px; border:none" alt=""></p>
+<p>If we take the log of the Binomial function above, and ignore the constant term, we have:</p>
+<p><img src="./embim480.gif" width="233" height="30" style="margin:1px; border:none" alt=""></p>
+<p>We can differentiate this expression and equate it to 0 to find the maximum:</p>
+<p><img src="./embim481.gif" width="510" height="57" style="margin:1px; border:none" alt=""></p>
+<p>Hence our estimate for <span style="font-style: italic;">p</span> equals 45/100, as expected. </p>
+<p>For some distributions, including the <a href="http://www.statsref.com/HTML/normal_distribution.html" class="topiclink">Normal</a>, this analytical maximization procedure can be carried out without much difficulty, but in general it is not a practical approach, especially where multiple parameters need to be estimated. For example, with two parameters the line graph becomes a surface, and the problem becomes one of locating the global maximum (or minimum) value on this surface. With more parameters to estimate, and complex surfaces in the parameter space, numerical optimization methods are the only real option. In general such methods provide very good, though not necessarily provably optimal combinations of parameter values. Numerical procedures have been developed for estimating parameters for a range of problem types, not simply as a means of estimating the parameters of specific distributions. Additional examples for which MLE methods are available and widely used include: <a href="http://www.statsref.com/HTML/simple_regression.html" class="topiclink">simple (multiple) linear regression</a> models (LM); <a href="http://www.statsref.com/HTML/glim.html" class="topiclink">generalized linear modeling</a> (GLIM); <a href="http://www.statsref.com/HTML/time_series_analysis.html" class="topiclink">time series analysis</a> (ARMA models); and non-linear mixed effect models (NLME). Techniques used to obtain the maximum or minimum likelihood estimates range from search methods (e.g. Newton-Raphson and Simplex based methods – see further, Nocedal and Wright, 1999 [<a href="http://www.statsref.com/HTML/maximum_likelihhood_estimation.html#noc1" class="topiclink">NOC1</a>]) to simulated annealing (see Belisle, 1992 [<a href="http://www.statsref.com/HTML/maximum_likelihhood_estimation.html#bel1" class="topiclink">BEL1</a>]). Some methods are much faster than others, but may not produce estimates that are as close to the global optima as others. Simulated annealing has the advantage of being able to find globally optimal solutions or near global optimality when the parameter space is very complex (has many local optima and/or is non-differentiable), but is often extremely slow in comparison to other methods.</p>
+<p>In the coin tossing example, we examined a sample of 100 events. Each event, <span style="font-style: italic;">x</span><span style="font-size: 7pt; vertical-align: sub;">1</span>, <span style="font-style: italic;">x</span><span style="font-size: 7pt; vertical-align: sub;">2</span>, <span style="font-style: italic;">x</span><span style="font-size: 7pt; vertical-align: sub;">3</span>,… , represented an independent toss of the coin, which resulted in a head or tail. The joint probability of these events was therefore of the form <span style="font-style: italic;">p</span><span style="font-size: 7pt; vertical-align: super;">45</span><span style="font-style: italic;">q</span><span style="font-size: 7pt; vertical-align: super;">55</span>. More generally, if <span style="font-style: italic;">x</span><span style="font-size: 7pt; vertical-align: sub;">1</span>, <span style="font-style: italic;">x</span><span style="font-size: 7pt; vertical-align: sub;">2</span>, <span style="font-style: italic;">x</span><span style="font-size: 7pt; vertical-align: sub;">3</span>,… <span style="font-style: italic;">x</span><span style="font-size: 7pt; vertical-align: sub;">n</span> is a random sample from a density function f(<span style="font-style: italic;">x</span>;θ), where θ is a vector of parameters, then the likelihood function, <span style="font-style: italic;">L</span>, is the product of the density function computed for each variable separately, or <span style="font-style: italic;">L</span>(θ)= f(<span style="font-style: italic;">x</span><span style="font-size: 7pt; vertical-align: sub;">1</span>; θ) f(<span style="font-style: italic;">x</span><span style="font-size: 7pt; vertical-align: sub;">2</span>; θ) f(<span style="font-style: italic;">x</span><span style="font-size: 7pt; vertical-align: sub;">3</span>; θ)… f(<span style="font-style: italic;">x</span><span style="font-size: 7pt; vertical-align: sub;">n</span>; θ), i.e.</p>
+<p><img src="./embim482.gif" width="135" height="60" style="margin:1px; border:none" alt=""></p>
+<p>Hence the log likelihood is simply:</p>
+<p><img src="./embim483.gif" width="348" height="58" style="margin:1px; border:none" alt=""></p>
+<p>To maximize this function, under fairly broad assumptions, it can be partially differentiated with respect to the individual parameters and these equated to zero:</p>
+<p><img src="./embim484.gif" width="335" height="85" style="margin:1px; border:none" alt=""></p>
+<p>This formulation can be used to determine the maximum likelihood estimators for common distributions such as the Normal distribution. If we do this for the <a href="http://www.statsref.com/HTML/normal_distribution.html" class="topiclink">Normal</a> we find that the mean of the sample is the MLE for the population mean and the sample variance is the MLE for the population variance, but as we have already seen in our discussion of the sample variance the latter is a biased estimator.</p>
+<p>MLEs have a number of important properties. As we have noted they are not necessarily unbiased (although they are asymptotically unbiased), indeed they are best asymptotically Normal (BAN) estimators and are generally invariant under simple transforms (for example, the square root operation, ensuring that the standard deviation can be estimated as the square root of the variance estimate). In general MLE is not a safe procedure for small samples, and is not suitable (in its basic form) as a procedure for comparing alternative models (see further, <a href="http://www.statsref.com/HTML/measures_of_complexity_and_dim.html#aikaikeinformationcriterion" class="topiclink">AIC/SIC</a>).</p>
+<p class="p_Subtopic_atoc_" style="border-top: none; border-right: none; border-left: none;"><a id="likelihoodandlinearregression"></a><span class="f_Subtopic_atoc_">Likelihood and linear regression</span></p>
+<p>Suppose we have a set of independent variables, {<span style="font-style: italic;">x</span><span style="font-size: 7pt; vertical-align: sub;">k</span>}, and a dependent variable, <span style="font-style: italic;">y</span>, which we wish to model as a linear function of the <span style="font-style: italic;">x</span>-variables. The general form of this relationship is: </p>
+<p><img src="./embim485.gif" width="232" height="63" style="margin:1px; border:none" alt=""></p>
+<p>where the error terms, <span style="font-style: italic;">ε</span><span style="font-size: 7pt; vertical-align: sub;">i</span> , are assumed to be distributed in accordance with a Normal distribution with mean 0 and variance σ<span style="font-size: 7pt; vertical-align: super;">2</span>. The vector of parameters, <span style="font-weight: bold;">β</span>, need to be estimated - typically this estimation is achieved using ordinary least squares (OLS). Now the expression above can be rearranged as:</p>
+<p><img src="./embim486.gif" width="105" height="28" style="margin:1px; border:none" alt=""></p>
+<p>The standardized variable <span style="font-style: italic;">z</span><span style="font-size: 7pt; vertical-align: sub;">i</span>= <span style="font-style: italic;">ε</span><span style="font-size: 7pt; vertical-align: sub;">i</span> /σ is thus distributed as a unit <a href="http://www.statsref.com/HTML/normal_distribution.html" class="topiclink">Normal</a>, N(0,1), and since we assume the observations are independent and the variance is constant, we can write the likelihood as:</p>
+<p><img src="./embim487.gif" width="120" height="60" style="margin:1px; border:none" alt=""></p>
+<p>where φ(<span style="font-style: italic;">z</span><span style="font-size: 7pt; vertical-align: sub;">i</span>) is the unit Normal distribution function. If we take logs of this expression it becomes a summation, and this simplifies to:</p>
+<p><img src="./embim488.gif" width="253" height="48" style="margin:1px; border:none" alt=""></p>
+<p>where SSR is the sum of squared residuals. The constants in this expression can be ignored, so it can be seen that maximizing the likelihood is equivalent to minimizing the sum of squared residuals, which is precisely the result achieved using <a href="http://www.statsref.com/HTML/least_squares.html" class="topiclink">least squares</a> procedures – the two approaches are functionally equivalent. However, whereas OLS provides MLEs in this example, more generally least squares will not provide MLEs where the model assumptions and/or structures are relaxed or more general. In these situations producing likelihood expressions may be possible, and it is these that are often used to provide the parameter estimates via numerical optimization techniques.</p>
+<p class="p_Subtopic_atoc_" style="border-top: none; border-right: none; border-left: none;"><a id="likelihoodratiolrtest"></a><span class="f_Subtopic_atoc_">Likelihood ratio (LR) test</span></p>
+<p>We now consider the situation where we wish to compare two alternative hypotheses, H<span style="font-size: 7pt; vertical-align: sub;">0</span> and H<span style="font-size: 7pt; vertical-align: sub;">A</span>. We could compute the ratio of the MLE estimators, L(H<span style="font-size: 7pt; vertical-align: sub;">A</span>)/L(H<span style="font-size: 7pt; vertical-align: sub;">0</span>), or the difference LL(H<span style="font-size: 7pt; vertical-align: sub;">A</span>)-LL(H<span style="font-size: 7pt; vertical-align: sub;">0</span>), if log likelihoods are taken and examine the size of this ratio or difference. In the example of the coin tossing trial, H<span style="font-size: 7pt; vertical-align: sub;">A</span> could be set to 0.45 as compared to the null hypothesis for an unbiased coin of H<span style="font-size: 7pt; vertical-align: sub;">0</span>:0.5. In large samples the statistic <span style="font-family: &#39;Arial Unicode MS&#39;, &#39;Lucida Sans Unicode&#39;, &#39;Arial&#39;;">χ</span><span style="font-size: 7pt; vertical-align: super;">2</span>=2[L(H<span style="font-size: 7pt; vertical-align: sub;">A</span>)-L(H<span style="font-size: 7pt; vertical-align: sub;">0</span>)] is distributed as a <a href="http://www.statsref.com/HTML/chi-square.html" class="topiclink">Chi-square</a> variate with degrees of freedom (DF) defined by the difference between the DF associated with two hypotheses. In this example, there is just one DF as the null hypothesis has no DF (the value of <span style="font-style: italic;">p</span> is fixed). The following table summarizes the comparison of the two models:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 1px 3px 1px 3px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tbody><tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:65px; padding:4px; border:solid 1px #000000;"><p class="p_TablePlus"><span class="f_TablePlus">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:99px; padding:4px; border:solid 1px #000000;"><p class="p_TablePlus"><span class="f_TablePlus">H</span><span class="f_TablePlus" style="font-size: 7pt; vertical-align: sub;">0</span></p>
+</td>
+<td style="vertical-align:top; width:98px; padding:4px; border:solid 1px #000000;"><p class="p_TablePlus"><span class="f_TablePlus">H</span><span class="f_TablePlus" style="font-size: 7pt; vertical-align: sub;">A</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:65px; padding:4px; border:solid 1px #000000;"><p class="p_TablePlus"><span class="f_TablePlus" style="font-style: italic;">p</span></p>
+</td>
+<td style="vertical-align:top; width:99px; padding:4px; border:solid 1px #000000;"><p class="p_TablePlus"><span class="f_TablePlus">0.50</span></p>
+</td>
+<td style="vertical-align:top; width:98px; padding:4px; border:solid 1px #000000;"><p class="p_TablePlus"><span class="f_TablePlus">0.45</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:65px; padding:4px; border:solid 1px #000000;"><p class="p_TablePlus"><span class="f_TablePlus">L(</span><span class="f_TablePlus" style="font-style: italic;">p</span><span class="f_TablePlus">)</span></p>
+</td>
+<td style="vertical-align:top; width:99px; padding:4px; border:solid 1px #000000;"><p class="p_TablePlus"><span class="f_TablePlus">0.048474</span></p>
+</td>
+<td style="vertical-align:top; width:98px; padding:4px; border:solid 1px #000000;"><p class="p_TablePlus"><span class="f_TablePlus">0.079988</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:65px; padding:4px; border:solid 1px #000000;"><p class="p_TablePlus"><span class="f_TablePlus">LL(</span><span class="f_TablePlus" style="font-style: italic;">p</span><span class="f_TablePlus">)</span></p>
+</td>
+<td style="vertical-align:top; width:99px; padding:4px; border:solid 1px #000000;"><p class="p_TablePlus"><span class="f_TablePlus">-3.02672</span></p>
+</td>
+<td style="vertical-align:top; width:98px; padding:4px; border:solid 1px #000000;"><p class="p_TablePlus"><span class="f_TablePlus">-2.52588</span></p>
+</td>
+</tr>
+</tbody></table>
+</div>
+<p>Hence <span style="font-family: &#39;Arial Unicode MS&#39;, &#39;Lucida Sans Unicode&#39;, &#39;Arial&#39;;">χ</span><span style="font-size: 7pt; vertical-align: super;">2</span>=2(-2.52588+3.02672)=1.0017. This has a probability of approximately 31% using the <a href="http://www.statsref.com/HTML/chi-square.html" class="topiclink">Chi-square</a> distribution, so we do not reject the hypothesis that the coin is unbiased. In fact a result of &lt;40 heads in 100 tosses of the coin would be required to indicate that the coin was biased in favor of tails with 95% confidence. More generally, LR tests of this type can be applied where the null hypothesis is defined for a vector of calculated parameters, with 0 DF, with the alternative hypothesis being a vector of <span style="font-style: italic;">r</span> unknown parameters, with <span style="font-style: italic;">r</span> DF. It is generally felt that use of the chi-squared distribution in this test is safe for <span style="font-style: italic;">r</span>&lt;100. The LR test is generally felt to be preferable to the slightly simpler, and thus faster, <a href="http://en.wikipedia.org/wiki/Wald_test" target="_blank" onclick="return HMTrackTopiclink(this);" class="weblink">Wald test</a>, though the two are asymptotically equivalent.</p>
+<p class="p_Subtopic_atoc_" style="border-top: none; border-right: none; border-left: none;"><span class="f_Subtopic_atoc_">References</span></p>
+<p class="p_References"><a id="bel1"></a><span class="f_References">[BEL1] Belisle C J P (1992) Convergence theorems for a class of simulated annealing algorithms on R</span><span class="f_References" style="font-size: 7pt; vertical-align: super;">d</span><span class="f_References">. J Applied Probability, 29, 885–895</span></p>
+<p class="p_References"><a id="gou1"></a><span class="f_References">[GOU1] Gould W, Pitblado J, Sribney W (2005) Maximum Likelihood Estimation with Stata. Stata Press; 3rd ed</span></p>
+<p class="p_References"><a id="noc1"></a><span class="f_References">[NOC1] Nocedal J, Wright S J (1999) Numerical Optimization. Springer</span></p>
+<p class="p_References"><span class="f_References">Wikipedia: Maximum Likelihood: <a href="http://en.wikipedia.org/wiki/Maximum_likelihood" target="_blank" onclick="return HMTrackTopiclink(this);" class="weblink">http://en.wikipedia.org/wiki/Maximum_likelihood</a> </span></p>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div><p class="help-url"><b>URL of this page:&nbsp;</b><a href="http://www.statsref.com/HTML/?maximum_likelihhood_estimation.html" target="_top" "="">http://www.statsref.com/HTML/?maximum_likelihhood_estimation.html</a></p></div>
+<script type="text/javascript">
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ nsrInit();
+ }
+var baseurl = document.URL.substring(0,document.URL.lastIndexOf("/")+1); 
+$('#idcontent').append('<p class="help-url"><b>URL of this page:&nbsp;</b><a href="'+baseurl+'?maximum_likelihhood_estimation.html" target="_top"">'+baseurl+'?maximum_likelihhood_estimation.html</a></p>');
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

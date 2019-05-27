@@ -1,0 +1,6 @@
+reset;
+model lab12ex2d.mod;
+data lab12ex2d.dat;
+option solver gurobi;
+solve;
+display {x in facility,y in location}position[x,y];
